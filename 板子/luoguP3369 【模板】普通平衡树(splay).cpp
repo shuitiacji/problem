@@ -104,5 +104,6 @@ debug:
 1.27行写成if(goal==root)
 2.74行忘记splay(u,0)
 3.73行写成.ch[1]
+ps:洛谷55分一般是del写错
 4.91写成t[find(x)].sz
 */
