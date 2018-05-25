@@ -87,4 +87,8 @@ debug:
 5.16:
 1.maintain忘记自身+1
 2.gao忘记pushdown
+5.21:
+1.gao忘记pushdown
+2.gao忘记把==0x3f3f3f3f去掉
+3.39行写成t[t[u].v]而不是t[t[u].v<x]
 */
