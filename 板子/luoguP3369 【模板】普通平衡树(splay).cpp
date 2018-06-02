@@ -54,13 +54,14 @@ int k_q(int x){
 		}
 	}
 }
-int find(int x){
+void find(int x){
 	int u=root;
 	while(t[u].v!=x&&t[u].ch[t[u].v<x])u=t[u].ch[t[u].v<x];
 	splay(u,0);
 }
 int Last_Next(int x,int fg){//fg 0 last fg 1 next
-	int u=find(x);
+	find(x);
+	int u=root;
 	if((fg==0&&t[u].v<x)||(fg==1&&t[u].v>x))return u;
 	u=t[u].ch[fg];
 	while(t[u].ch[fg^1])u=t[u].ch[fg^1];
@@ -91,7 +92,7 @@ int main(){
 		int x=read();
 		if(opt==1)ins(x);
 		if(opt==2)del(x);
-		if(opt==3)printf("%d\n",t[t[find(x)].ch[0]].sz);
+		if(opt==3){find(x);printf("%d\n",t[t[root].ch[0]].sz);}
 		if(opt==4)printf("%d\n",t[k_q(x+1)].v);
 		if(opt==5)printf("%d\n",t[Last_Next(x,0)].v);
 		if(opt==6)printf("%d\n",t[Last_Next(x,1)].v);
