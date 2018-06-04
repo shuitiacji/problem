@@ -20,7 +20,6 @@ struct dinic{
 /**/	vis[s]=1;
 		while(!q.empty()){
 			int u=q.front();q.pop();
-	//		cout<<u<<endl;
 			for(int i=head[u];i!=-1;i=next[i]){
 				int v=to[i];
 				if(!vis[v]&&flow[i]<cap[i]){
@@ -61,7 +60,6 @@ int main(){
 	freopen("a.out","w",stdout);
 	scanf("%d%d%d%d",&n,&m,&s,&t);
 	e=-1;
-/**/memset(T.next,-1,sizeof(T.next));
 /**/memset(T.head,-1,sizeof(T.head));
 	for(int i=1;i<=m;++i){
 		int x,y,z;
@@ -75,7 +73,7 @@ int main(){
 /*
 debug:
 6.2
-1.64,65,因为e从0开始，这两个东西要置成-1
+1.64,因为e从0开始，这两个东西要置成-1
 2.20行写成0
 3.33行忘记return
 4.38行忘记&
