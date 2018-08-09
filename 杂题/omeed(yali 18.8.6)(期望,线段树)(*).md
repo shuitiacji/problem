@@ -1,7 +1,13 @@
-
 ### Description
 
+![](../pic/18.8.8-1.png)
+
+![](../pic/18.8.8-2.png)
+
+<!--more-->
+
 ### Solution
+
 基础分很好搞，关键是连击分
 设$f_i$表示$combo(i)$的期望值
 显然有$Ans(combo) = B \times \sum_{i = l}^{r} p_i \times (f_{i-1} + 1)$
