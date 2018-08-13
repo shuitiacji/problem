@@ -30,7 +30,7 @@ void dfs2(int u,int tp){
 int find(int u,int v){
 	int f1=top[u],f2=top[v];
 	while(f1!=f2){
-		if(dep[u]<dep[v])swap(u,v),swap(f1,f2);
+		if(dep[f1]<dep[f2])swap(u,v),swap(f1,f2);
 		u=f[f1];f1=top[u];
 	}
 	if(dep[u]>dep[v])swap(u,v);

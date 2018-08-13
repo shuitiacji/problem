@@ -13,7 +13,7 @@ void mathinit()
 		for(int j = 1; j <= cnt && prime[j] * i <= maxn - 10; ++j)
 		{
 			vis[prime[j] * i] = 1;
-			if(i % prime[j]) mu[i * prime[j]] = -mu[i], vis[i * prime[j]] = 1;
+			if(i % prime[j]) mu[i * prime[j]] = -mu[i];
 			else 
 			{
 				mu[i * prime[j]] = 0;

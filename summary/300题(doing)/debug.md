@@ -1,0 +1,1 @@
+1.树链剖分if(dep[f1]<dep[f2])不要写成if(dep[u]<dep[v])
